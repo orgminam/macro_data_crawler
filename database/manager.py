@@ -13,8 +13,9 @@ __all__ = [
 
 config = configparser.ConfigParser()
 config.read("credentials.cfg")
-engine = create_engine(
-    f"postgresql+psycopg2://{config['database']['username']}:{config['database']['password']}@172.23.13.11:5432/koscom", pool_pre_ping=True, pool_size=20, max_overflow=30)
+engine = create_engine(f'sqlite:///database.db')
+#engine = create_engine(
+#    f"postgresql+psycopg2://{config['database']['username']}:{config['database']['password']}@{config['database']['address']}/{config['database']['dbname']}", pool_pre_ping=True, pool_size=20, max_overflow=30)
 Base = declarative_base()
 Session = scoped_session(sessionmaker(bind=engine))
 
