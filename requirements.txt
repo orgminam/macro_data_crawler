@@ -1,0 +1,6 @@
+sqlalchemy
+logparser
+scrapyd
+scrapyd-client
+psycopg2-binary
+pyyaml

@@ -1,0 +1,45 @@
+kr_cpi:
+    name: 소비자물가지수
+    source: 통계청
+    unit: "2015=100"
+    first_date: "199001"
+    frequency: M
+    precision: 2
+    country: kr
+    main_category: 물가
+    sub_category: 소비자물가
+    params:
+        orgId: "101" # 기관명: 101(통계청)
+        tblId: DT_1J17009
+        objL1: DA
+        itmId: T10
+        loadGubun: "1"
+        prdSe: M
+kr_core_cpi:
+    name: 근원소비자물가지수
+    source: 통계청
+    unit: "2015=100"
+    first_date: "199001"
+    frequency: M
+    precision: 2
+    country: kr
+    main_category: 물가
+    sub_category: 근원소비자물가
+    params:
+        orgId: "101" # 기관명: 101(통계청)
+        tblId: DT_1J17009
+        objL1: DB
+        itmId: T10
+        loadGubun: "1"
+        prdSe: M
+kr_cement_prod:
+    name: 시멘트국내출하
+    source: 시멘트협회
+    unit: "kt"
+    first_date: "200801"
+    last_date: "201801"
+    frequency: M
+    precision: 0
+    country: kr
+    main_category: 제조
+    sub_category: 시멘트출하
